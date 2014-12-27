@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+
+    "name": "Dummy Facebook",
+    "description": "a dummy facebook app that blacks out your screen & says things like YOUR TIME IS BETTER SPENT ELSEWHERE & HIGH SCHOOL FRIENDS: STILL IDIOTS",
+    "version": "1.0",
+
+    "icons": {
+               "48": "icon_48.png",
+               "128": "icon_128.png"
+             },
+
+    "content_scripts": [
+        {
+            "matches": ["https://www.facebook.com/",
+                        "http://www.facebook.com/"],
+            "js": ["DummyFacebook.js"],
+            "run_at": "document_end"
+        }
+    ]
+}
